@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66591FF9-3126-443D-BDDD-089C17E3D063}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpOO.SOLID</RootNamespace>
+    <AssemblyName>CSharpOO.SOLID</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="1 - SRP\SRP.Solucao\UsuarioService.cs" />
+    <Compile Include="1 - SRP\SRP.Solucao\Usuario.cs" />
+    <Compile Include="1 - SRP\SRP.Problema\Usuario.cs" />
+    <Compile Include="1 - SRP\SRP.Solucao\UsuarioRepository.cs" />
+    <Compile Include="1 - SRP\SRP.Solucao\CPFServices.cs" />
+    <Compile Include="1 - SRP\SRP.Solucao\EmailServices.cs" />
+    <Compile Include="2 - OCP\OCP.Problema\Conta.cs" />
+    <Compile Include="2 - OCP\OCP.Problema\DebitoConta.cs" />
+    <Compile Include="2 - OCP\OCP.Problema\TipoConta.cs" />
+    <Compile Include="2 - OCP\OCP.Solucao\Conta.cs" />
+    <Compile Include="2 - OCP\OCP.Solucao\ContaCorrente.cs" />
+    <Compile Include="2 - OCP\OCP.Solucao\ContaPoupanca.cs" />
+    <Compile Include="3 - LSP\LSP.Problema\CalculoArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3 - LSP\LSP.Solucao\CalculoAreaCorreto.cs" />
+    <Compile Include="3 - LSP\LSP.Solucao\Paralelogramo.cs" />
+    <Compile Include="3 - LSP\LSP.Solucao\Quadrado.cs" />
+    <Compile Include="3 - LSP\LSP.Solucao\Retangulo.cs" />
+    <Compile Include="3 - LSP\LSP.Problema\Quadrado.cs" />
+    <Compile Include="3 - LSP\LSP.Problema\Retangulo.cs" />
+    <Compile Include="4 - ISP\ISP.Problema\CadastroUsuario.cs" />
+    <Compile Include="4 - ISP\ISP.Problema\CadastroProduto.cs" />
+    <Compile Include="4 - ISP\ISP.Problema\ICadastro.cs" />
+    <Compile Include="4 - ISP\ISP.Solucao\CadastroUsuario.cs" />
+    <Compile Include="4 - ISP\ISP.Solucao\CadastroProduto.cs" />
+    <Compile Include="4 - ISP\ISP.Solucao\Interfaces\ICadastro.cs" />
+    <Compile Include="4 - ISP\ISP.Solucao\Interfaces\ICadastroUsuario.cs" />
+    <Compile Include="4 - ISP\ISP.Solucao\Interfaces\ICadastroProduto.cs" />
+    <Compile Include="5 - DIP\DIP.Problema\Usuario.cs" />
+    <Compile Include="5 - DIP\DIP.Problema\UsuarioRepository.cs" />
+    <Compile Include="5 - DIP\DIP.Problema\UsuarioService.cs" />
+    <Compile Include="5 - DIP\DIP.Problema\CPFServices.cs" />
+    <Compile Include="5 - DIP\DIP.Problema\EmailServices.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\Usuario.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\UsuarioRepository.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\UsuarioServices.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\CPFServices.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\EmailServices.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\Interfaces\IUsuarioRepository.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\Interfaces\IUsuarioServices.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\Interfaces\ICPFServices.cs" />
+    <Compile Include="5 - DIP\DIP.Solucao\Interfaces\IEmailServices.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
